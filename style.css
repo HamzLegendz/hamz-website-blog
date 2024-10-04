@@ -31,7 +31,7 @@ body, html {
 }
 
 .social-icons {
-    margin-top: 60px;
+    margin-top: 135px;
 }
 
 .social-icons a {
@@ -40,7 +40,7 @@ body, html {
 }
 
 .social-icons img {
-    width: 40px;
+    width: 60px;
     opacity: 0,9;
     transition: opacity 0.3s ease;
 }
