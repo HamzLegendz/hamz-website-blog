@@ -41,7 +41,7 @@ body, html {
 
 .social-icons img {
     width: 40px;
-    opacity: 0;
+    opacity: 0,9;
     transition: opacity 0.3s ease;
 }
 
