@@ -10,9 +10,9 @@ let currentSec , currentMin;
 
 song.onloadeddata = ()=> {
    //song duration in secend 
-   durationSec = parseInt(song.duration % 40);
+   durationSec = parseInt(song.duration % 30);
    //song duration in minutes
-   durationMin = parseInt(song.duration / 40);
+   durationMin = parseInt(song.duration / 30);
    //set range max value to song duration
    track.max = Math.floor(song.duration);
    durationMin = durationMin < 10 ? '0' + durationMin : durationMin;
@@ -61,8 +61,8 @@ track.addEventListener('input',(e)=> {
 function update(){
    track.value = song.currentTime;
    //set minutes and secends
-   currentSec = parseInt(song.currentTime % 40);
-   currentMin = parseInt(song.currentTime / 40);
+   currentSec = parseInt(song.currentTime % 30);
+   currentMin = parseInt(song.currentTime / 30);
   
    currentSec = currentSec < 10 ? '0' + currentSec : currentSec;
    currentMin = currentMin < 10 ? '0' + currentMin : currentMin;
