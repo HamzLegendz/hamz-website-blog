@@ -3,8 +3,8 @@
 }
 
 * {
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
   box-sizing: border-box;
 }
 
@@ -13,6 +13,12 @@ body, html {
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background: transparent;
 }
 
 .profile-container {
@@ -34,7 +40,7 @@ body, html {
 }
 
 .social-icons {
-  margin-top: 20px; /* Ubah ini untuk mengatur jarak antara gambar profil dan ikon sosial */
+  margin-top: 20px;
 }
 
 .social-icons a {
@@ -44,7 +50,7 @@ body, html {
 
 .social-icons img {
   width: 130px;
-  opacity: 0.9; /* Ganti koma dengan titik */
+  opacity: 0.9;
   transition: opacity 0.3s ease;
 }
 
@@ -52,19 +58,52 @@ body, html {
   opacity: 1;
 }
 
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+  z-index: 1;
+}
+
+h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 16px;
+  z-index: 3;
+}
+
+audio {
+  display: none;
+}
+
+/* Music Player Styling */
 .main {
-  width: 280px; /* Kurangi lebar */
-  height: 500px; /* Kurangi tinggi */
+  width: 280px; /* Ukuran lebih kecil */
+  height: 450px; /* Menyesuaikan proporsi */
   background: linear-gradient(#888DC3, #9CC391);
   display: flex;
   align-items: center;
   flex-direction: column;
   border-radius: 5px;
   overflow: hidden;
-  position: center;
+  position: relative;
   transition: 0.3s;
-  box-shadow: 0 0 15px #FFFFFF, 0 0 30px #FFFFFF, 0 0 45px #00FFFF; /* Efek neon putih */
-  margin-top: 20px; /* Jarak antara ikon sosial dan pemutar musik */
+  box-shadow: 0 0 15px #FFFFFF, 0 0 30px #FFFFFF, 0 0 45px #00FFFF;
+  margin-top: 20px; /* Agar berada tepat di bawah bio */
 }
 
 .main .header {
@@ -72,16 +111,14 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 10px;
   background: rgba(0, 0, 0, 0.20);
-  transition: 0.5s ease;
 }
 
 .header :first-child {
   height: 20px;
   width: 20px;
   color: #fff;
-  background: rgba(0, 0, 0, 0.20);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,22 +137,21 @@ body, html {
 }
 
 .main .banner {
-  width: 100%; /* Sesuaikan lebar */
-  height: 200px; /* Kurangi tinggi */
+  width: 100%;
+  height: 200px; /* Ukuran gambar lebih kecil */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 40px;
-  transition: 0.5s ease;
+  margin-top: 10px;
 }
 
 .banner .cover {
-  width: 200px; /* Kurangi lebar cover */
-  height: 200px; /* Kurangi tinggi cover */
+  width: 150px; /* Ukuran lebih kecil */
+  height: 150px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid white;
+  border: 2px solid white;
 }
 
 .banner .cover img {
@@ -123,29 +159,20 @@ body, html {
   width: 100%;
 }
 
-.banner .singer, .title {
-  width: 100%;
-  margin-top: 10px;
-  text-align: center;
-}
-
 .banner .singer {
-  font-size: 18px; /* Kurangi ukuran font */
+  font-size: 18px; /* Font lebih kecil */
 }
 
 .banner .title {
-  margin-top: 5px;
-  font-size: 12px; /* Kurangi ukuran font */
+  font-size: 12px; /* Font lebih kecil */
 }
 
 .main .controls {
   width: 100%;
-  height: 80px; /* Kurangi tinggi */
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 20px;
-  transition: 0.5s ease;
+  margin-top: 10px;
 }
 
 .controls input {
@@ -163,7 +190,6 @@ body, html {
   background: #010101;
   border-radius: 5px;
   box-shadow: 0px 0px 10px 1px #000;
-  z-index: -2;
 }
 
 .controls .buttons {
@@ -171,62 +197,23 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .controls .length {
   width: 90%;
-  position: relative;
-  top: 3px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.controls .length span {
-  font-size: 12px;
-  font-weight: 600;
-}
-
 .buttons i {
-  font-size: 30px;
-  margin-left: 15px;
+  font-size: 25px;
+  margin-left: 10px;
 }
 
 .buttons :nth-child(2) {
-  font-size: 50px; /* Kurangi ukuran font */
-  position: relative;
-  bottom: 3px;
-}
-
-.main.active {
-  background: black;
-}
-
-.main.active .header {
-  color: var(--txt);
-  background: rgba(255, 255, 255, 0.10);
-}
-
-.main.active .banner,
-.main.active .controls {
-  color: var(--txt);
-}
-
-.main.active input::-webkit-slider-thumb {
-  background: #fff;
-  box-shadow: 0px 0px 10px 3px #fff;
-}
-
-.main.active .header :first-child,
-.main.active .header :last-child {
-  background: rgba(255, 255, 255, 0.10);
-}
-
-.forword:active,
-.backword:active {
-  color: #fff;
-  transform: scale(1.2);
+  font-size: 50px; /* Ukuran play lebih kecil */
 }
 
 @media (max-width: 768px) {
