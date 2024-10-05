@@ -61,7 +61,7 @@ body, html {
   flex-direction: column;
   border-radius: 5px;
   overflow: hidden;
-  position: fixed;
+  position: center;
   transition: 0.3s;
   box-shadow: 0 0 15px #FFFFFF, 0 0 30px #FFFFFF, 0 0 45px #00FFFF; /* Efek neon putih */
   margin-top: 20px; /* Jarak antara ikon sosial dan pemutar musik */
