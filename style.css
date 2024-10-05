@@ -1,98 +1,233 @@
-/* Reset */
+:root {
+  --txt: white;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
 body, html {
-    height: 100%;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background: transparent;
 }
 
 .profile-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 2;
-    color: white;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+  color: white;
 }
 
 .profile-picture img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .social-icons {
-    margin-top: 380px;
+  margin-top: 20px;
 }
 
 .social-icons a {
-    margin: 0 15px;
-    display: inline-block;
+  margin: 0 15px;
+  display: inline-block;
 }
 
 .social-icons img {
-    width: 130px;
-    opacity: 0,9;
-    transition: opacity 0.3s ease;
+  width: 130px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
 }
 
 .social-icons img:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 #background-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(70%);
-    z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+  z-index: 1;
 }
 
 h1 {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 16px;
-    z-index: 3;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 16px;
+  z-index: 3;
 }
 
 audio {
-    display: none;
+  display: none;
+}
+
+/* Music Player Styling */
+.main {
+  width: 280px; /* Ukuran lebih kecil */
+  height: 450px; /* Menyesuaikan proporsi */
+  background: linear-gradient(#888DC3, #9CC391);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s;
+  box-shadow: 0 0 15px #FFFFFF, 0 0 30px #FFFFFF, 0 0 45px #00FFFF;
+  margin-top: 20px; /* Agar berada tepat di bawah bio */
+}
+
+.main .header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.20);
+}
+
+.header :first-child {
+  height: 20px;
+  width: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 25px;
+}
+
+.header :last-child {
+  background: rgba(0, 0, 0, 0.20);
+  width: 30px;
+  display: flex;
+  justify-content: left;
+  height: fit-content;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.main .banner {
+  width: 100%;
+  height: 200px; /* Ukuran gambar lebih kecil */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.banner .cover {
+  width: 150px; /* Ukuran lebih kecil */
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid white;
+}
+
+.banner .cover img {
+  height: 100%;
+  width: 100%;
+}
+
+.banner .singer {
+  font-size: 18px; /* Font lebih kecil */
+}
+
+.banner .title {
+  font-size: 12px; /* Font lebih kecil */
+}
+
+.main .controls {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.controls input {
+  appearance: none;
+  width: 90%;
+  height: 2px;
+  margin-top: 10px;
+  background: aliceblue;
+}
+
+.controls input::-webkit-slider-thumb {
+  appearance: none;
+  height: 7px;
+  width: 7px;
+  background: #010101;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 1px #000;
+}
+
+.controls .buttons {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.controls .length {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttons i {
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+.buttons :nth-child(2) {
+  font-size: 50px; /* Ukuran play lebih kecil */
 }
 
 @media (max-width: 768px) {
-    .profile-picture img {
-        width: 120px;
-        height: 120px;
-    }
+  .profile-picture img {
+    width: 120px;
+    height: 120px;
+  }
 
-    .social-icons img {
-        width: 30px;
-    }
+  .social-icons img {
+    width: 30px;
+  }
 
-    footer {
-        font-size: 14px;
-        padding: 15px 0;
-    }
+  footer {
+    font-size: 14px;
+    padding: 15px 0;
+  }
 }
