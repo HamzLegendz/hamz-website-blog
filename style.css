@@ -216,6 +216,13 @@ audio {
   font-size: 50px; /* Ukuran play lebih kecil */
 }
 
+/* WhatsApp Icon */
+.whatsapp-icon {
+  margin-top: 10px; /* Jarak atas */
+  display: flex;
+  justify-content: center;
+}
+
 @media (max-width: 768px) {
   .profile-picture img {
     width: 120px;
