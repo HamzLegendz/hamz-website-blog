@@ -97,7 +97,7 @@ audio {
 .main {
     width: 280px; /* Ukuran lebih kecil */
     height: 450px; /* Menyesuaikan proporsi */
-    background: black;
+    background: #D3D3D3;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -216,9 +216,46 @@ audio {
 }
 
 .buttons :nth-child(2) {
-    font-size: 50px; /* Ukuran play lebih kecil */
+    font-size: 50px;
+    position: relative;
+    bottom: 3px;
+}
+.coverpic {
+  animation: animate 20s linear infinite;
+}
+@keyframes animate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
 }
 
+.main.active {
+  background: black;
+}
+.main.active .header {
+  color: var(--txt);
+  background: rgba(255,255,255,0.10);
+}
+.main.active .banner,
+.main.active .controls {
+  color: var(--txt);
+}
+.main.active input::-webkit-slider-thumb {
+  background: #fff;
+  box-shadow:0px 0px 10px 3px #fff;
+}
+.main.active .header :first-child,
+.main.active .header :last-child {
+  background: rgba(255,255,255,0.10);
+}
+.forword:active,
+.backword:active {
+  color: #fff;
+  transform: scale(1.2);
+}
 /* WhatsApp Icon */
 .whatsapp-icon {
     margin-top: 10px; /* Jarak atas */
