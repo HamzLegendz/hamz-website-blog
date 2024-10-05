@@ -96,7 +96,7 @@ audio {
 /* Music Player Styling */
 .main {
     width: 280px; /* Ukuran lebih kecil */
-    height: 450px; /* Menyesuaikan proporsi */
+    height: 440px; /* Menyesuaikan proporsi */
     background: #D3D3D3;
     display: flex;
     align-items: center;
