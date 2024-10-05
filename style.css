@@ -92,8 +92,8 @@ audio {
 
 /* Music Player Styling */
 .main {
-  width: 280px; /* Ukuran lebih kecil */
-  height: 450px; /* Menyesuaikan proporsi */
+  width: 240px; /* Ukuran lebih kecil */
+  height: 420px; /* Menyesuaikan proporsi */
   background: linear-gradient(#888DC3, #9CC391);
   display: flex;
   align-items: center;
@@ -103,7 +103,7 @@ audio {
   position: relative;
   transition: 0.3s;
   box-shadow: 0 0 15px #FFFFFF, 0 0 30px #FFFFFF, 0 0 45px #00FFFF;
-  margin-top: 20px; /* Agar berada tepat di bawah bio */
+  margin-top: 25px; /* Agar berada tepat di bawah bio */
 }
 
 .main .header {
@@ -160,7 +160,7 @@ audio {
 }
 
 .banner .singer {
-  font-size: 18px; /* Font lebih kecil */
+  font-size: 16px; /* Font lebih kecil */
 }
 
 .banner .title {
